@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YouTube Content Blocker</title>
+    <style>
+        body {
+            width: 300px;
+            padding: 15px;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .input-group {
+            display: flex;
+            gap: 5px;
+        }
+        input {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 8px 15px;
+            background-color: #ff0000;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #cc0000;
+        }
+        .keyword-list {
+            margin-top: 10px;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+        .keyword-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px;
+            background-color: #f5f5f5;
+            margin-bottom: 5px;
+            border-radius: 4px;
+        }
+        .remove-btn {
+            background-color: #666;
+            padding: 4px 8px;
+            font-size: 12px;
+            margin-left: 8px;
+        }
+        .remove-btn:hover {
+            background-color: #444;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Block Content & Channels</h2>
+        <div class="input-group">
+            <input type="text" id="keywordInput" placeholder="Enter keyword to block">
+            <button id="blockBtn">Block</button>
+        </div>
+        <ul id="keywordList"></ul>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+{
+    "manifest_version": 3,
+    "name": "YouTube Content Blocker",
+    "description": "Block YouTube videos and channels containing specific keywords. Customize your YouTube experience by filtering out unwanted content.",
+    "version": "1.0.0",
+    "permissions": [
+        "activeTab",
+        "storage"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.youtube.com/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "css": [
+                "content.css"
+            ]
+        }
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "icons/icon16.png",
+            "48": "icons/icon48.png",
+            "128": "icons/icon128.png"
+        }
+    },
+    "icons": {
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+    },
+    "author": "Aashutosh Poudel (aashutosh.poudel8@gmail.com)",
+    "homepage_url": "",
+    "short_name": "YT Blocker",
+    "offline_enabled": true
+}
